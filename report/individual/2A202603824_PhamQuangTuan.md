@@ -148,7 +148,6 @@ KỊCH BẢN GIẢ ĐỊNH — 6 bước, 3 phút/đơn, chưa đo thực tế
 - Đề nghị khi pitch: xin hợp tác với một quán để quan sát 2 ca baseline và thử quy trình trong 2 ca tương đương; chưa đề nghị xây hệ thống lớn.
 - Phương án quay về: nháp sai hoặc không dùng được → nhân viên ghi phiếu theo cách cũ; chỉ đơn do người xác nhận mới được chuyển bếp.
 - Trạng thái: chuẩn bị trình bày; chưa có kết quả thử nghiệm tại quán.
-- Bản luyện thuyết trình: [pitch khoảng 90 giây, demo và câu hỏi thường gặp](../assets/cp2-pitch-quan-an.md).
 
 ### AI đã phản biện card thế nào
 

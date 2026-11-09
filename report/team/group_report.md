@@ -368,7 +368,22 @@ V1 bổ sung phạm vi Rule và cách so với No AI; dữ liệu bằng chứng
 | E4 | Giữ quyền người dùng | Không sửa/gửi/nộp thay; rà thủ công tiếp được khi công cụ hỏng | Có hành động ngoài quyền hoặc không có đường quay về |
 | E5 | Có lợi ích thực tế | Thời gian rà giảm ≥30%, lỗi không tăng; lợi ích ròng dương so với No AI trong 4 lượt | Nhanh do bỏ bước kiểm, lỗi tăng hoặc công cấu hình vượt tiết kiệm |
 
-[Bộ 10 tình huống đầu vào/đầu ra mong đợi](../assets/cp6-rule-eval-cases.md) kiểm E1–E4, **chưa chạy**. E5 cần đo tác vụ với người dùng.
+### Bộ 10 tình huống đầu vào/đầu ra mong đợi
+
+**Đặc tả mẫu, chưa chạy.** Bộ này kiểm E1–E4; E5 cần đo với người dùng. PASS chỉ xác nhận kiểm tra hình thức được nêu; FAIL là lỗi xác định; NEEDS_REVIEW là phần chưa xác minh hoặc cần người đọc. Kết quả phải gắn với commit và phiên bản cấu hình.
+
+| Mã | Input / thay đổi so với mẫu hợp lệ | Đầu ra mong đợi | Tiêu chí | Trạng thái |
+|---|---|---|---|---|
+| T01 | Repo có đúng file/tên/mục theo cấu hình; đường dẫn nội bộ tồn tại | PASS cho các kiểm tra hình thức; ghi rõ nội dung và nộp LMS chưa được xác nhận | E1, E2, E3 | Chưa chạy |
+| T02 | Xóa `report/team/group_report.md`, các phần khác giữ nguyên | FAIL: thiếu báo cáo nhóm, chỉ rõ đường dẫn và yêu cầu bắt buộc; không tự tạo file | E1, E4 | Chưa chạy |
+| T03 | Có danh sách MSSV/họ tên; file cá nhân của một người dùng sai tên so với danh sách | FAIL ở quy tắc tên; nêu người/file liên quan và mẫu tên cần đối chiếu, không tự đổi tên | E1, E4 | Chưa chạy |
+| T04 | File báo cáo tồn tại nhưng thiếu một heading bắt buộc được cấu hình | FAIL: nêu heading thiếu và file; không suy ra rằng các phần khác đã đúng nội dung | E1, E2 | Chưa chạy |
+| T05 | Heading đúng nhưng một ô bắt buộc là placeholder chính xác đã định nghĩa, ví dụ `[CHƯA ĐIỀN]` | FAIL cho kiểm tra placeholder; chỉ rõ ô/mục. Với chữ khác placeholder, chuyển đọc hiểu cho người rà, không tự đánh giá ý nghĩa | E1, E2 | Chưa chạy |
+| T06 | Bài không có file prototype hoặc một mục được cấu hình rõ là không áp dụng | Không báo thiếu mục tùy chọn; báo PASS cho yêu cầu thực sự áp dụng và ghi lý do không áp dụng | E1, E3 | Chưa chạy |
+| T07 | Ảnh Markdown trỏ đến một file nội bộ không tồn tại | FAIL: đường dẫn ảnh không tồn tại, chỉ rõ file báo cáo chứa link; không xóa link hoặc tạo ảnh thay | E1, E4 | Chưa chạy |
+| T08 | Một nguồn ngoài cần đăng nhập, timeout hoặc bị giới hạn truy cập | NEEDS_REVIEW kèm nguyên nhân và link; yêu cầu người dùng mở lại, không kết luận nguồn đúng/sai từ trạng thái mạng | E3 | Chưa chạy |
+| T09 | Kết quả PASS ghi commit A, nhưng bài định nộp là commit B hoặc cấu hình đổi phiên bản | Kết quả cũ không xác nhận B; NEEDS_REVIEW cho đến khi kiểm lại đúng bản. Không tự đưa trạng thái PASS cũ sang bản mới | E3 | Chưa chạy |
+| T10 | Bộ kiểm lỗi khi đọc file; chạy lại cũng lỗi; bài có đủ heading nhưng một mục lập luận còn mơ hồ | NEEDS_REVIEW; người rà dùng checklist gốc để kiểm toàn bộ, đọc nội dung và xác nhận bản cuối. Không sửa file, gửi dữ liệu hoặc tự nộp | E2, E3, E4 | Chưa chạy |
 
 **Lợi ích ròng trong 4 lượt** = tổng thời gian No AI − (công thiết lập + công cập nhật + tổng thời gian Rule). Thời gian Rule đã gồm đọc cảnh báo, sửa trong phạm vi, chạy lại và fallback.
 

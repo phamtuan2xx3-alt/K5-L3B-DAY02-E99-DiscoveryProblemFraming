@@ -75,7 +75,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 - [Báo cáo nhóm — CP4](report/team/group_report.md#3-kiểm-chứng--research-giải-pháp-đã-có-cp4).
 - [Báo cáo nhóm — CP6](report/team/group_report.md#6-mức-can-thiệp-ai-cp6).
-- [Bộ eval Rule](report/assets/cp6-rule-eval-cases.md).
+- [Bộ eval Rule](report/team/group_report.md#bộ-10-tình-huống-đầu-vàođầu-ra-mong-đợi).
 - [Báo cáo cá nhân](report/individual/2A202603824_PhamQuangTuan.md).
 
 **Điều mình học được từ phần nhóm:**
