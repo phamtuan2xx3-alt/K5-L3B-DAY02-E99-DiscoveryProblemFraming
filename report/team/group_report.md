@@ -189,108 +189,120 @@ Nguồn đã mở và kiểm ngày 09/11/2026. Bảng ghi khả năng theo tài 
 
 ## 4. Quy trình trước/sau (CP5)
 
-Phân tích cho candidate #7 — đối chiếu checklist bài nộp lab. CP4 chưa có kết quả nên đây là bản quy trình để nhóm kiểm chứng. Thời gian hiện tại lấy từ [Problem Card của Nhật](../individual/2A202603848_ChuVanNhat.md#problem-card-1--kiểm-tra-checklist-bài-nộp-lab); thời gian tương lai là dự kiến, chưa đo tại người dùng.
+Phạm vi phân tích là candidate #7 — đối chiếu checklist bài nộp lab. CP4 có các tình huống minh họa, chưa có phỏng vấn thực tế; quy trình và mục tiêu dưới đây là bản đề xuất để kiểm chứng.
 
 ### 4.1. Quy trình hiện tại
 
-Một lượt bắt đầu khi sinh viên đã có bản bài làm để rà và kết thúc khi nộp link repo trên LMS. Không tính thời gian viết bài ban đầu; thời gian sửa nội dung lớn và chờ mạng cần ghi riêng ở cả hai phương án.
+Actor chính là sinh viên phụ trách rà repo nhóm; tác giả từng báo cáo hỗ trợ làm rõ và tự sửa phần của mình. Đầu vào là bản bài làm hiện tại và bộ yêu cầu đang áp dụng; đầu ra là danh sách lỗi, bản đã rà và xác nhận nộp của từng thành viên.
+
+Thời gian tham chiếu lấy từ [Problem Card của Nhật](../individual/2A202603848_ChuVanNhat.md#problem-card-1--kiểm-tra-checklist-bài-nộp-lab). **45 phút là tự báo cáo của một người, chưa phải baseline chung**. Theo phân rã trong card, 40 phút dành cho rà và 5 phút cho nộp LMS; cần đo lại để xác nhận.
 
 ```mermaid
 flowchart TD
-    A["1. Đọc lại yêu cầu: 10 phút"] --> B["2. Kiểm tên repo: 5 phút"]
+    A["1. Đọc và gom yêu cầu: 10 phút"] --> B["2. Kiểm tên repo: 5 phút"]
     B --> C["3. Kiểm file cá nhân: 5 phút"]
-    C --> D["4. Mở từng báo cáo, dò mục bắt buộc: 15 phút"]
-    D --> E["5. Kiểm trạng thái Git và file sẽ nộp: 5 phút"]
-    E --> F["6. Nộp link repo trên LMS: 5 phút"]
+    C --> D["4. Mở từng báo cáo, đối chiếu mục: 15 phút"]
+    D --> E["5. Kiểm file và trạng thái repo: 5 phút"]
+    E --> F["6. Mỗi thành viên nộp link LMS: 5 phút"]
     style D fill:#b71c1c,stroke:#8e0000,color:#ffffff
 ```
 
-| Bước | Actor                                        | Input                                                  | Output / bàn giao                                   | Thời gian / tần suất | Ghi chú                                                          |
-| ---: | -------------------------------------------- | ------------------------------------------------------ | --------------------------------------------------- | -------------------- | ---------------------------------------------------------------- |
-|    1 | Sinh viên nộp bài                            | Đề bài, hướng dẫn nộp, template                        | Danh sách yêu cầu cần kiểm                          | 10 phút/lượt         | Đọc lại và tự gom yêu cầu                                        |
-|    2 | Sinh viên nộp bài                            | Tên repo trên GitHub; quy tắc đặt tên                  | Kết quả kiểm lớp, ngày và tên nhóm                  | 5 phút/lượt          | Đối chiếu tên repo thực tế, không chỉ tên thư mục local          |
-|    3 | Sinh viên nộp bài                            | Danh sách thành viên và thư mục individual             | Kết quả kiểm tên và sự hiện diện của file cá nhân   | 5 phút/lượt          | Phát hiện thiếu file, tên chưa đổi hoặc sai mẫu                  |
-|    4 | Người rà bài; tác giả báo cáo khi cần làm rõ | Báo cáo cá nhân/nhóm và danh sách yêu cầu              | Danh sách mục thiếu, trống hoặc cần tác giả xem lại | 15 phút/lượt         | **Bottleneck:** mở từng file, tìm từng mục và đối chiếu thủ công |
-|    5 | Sinh viên nộp bài                            | Trạng thái Git, danh sách file và bản repo trên GitHub | Bản bài làm đã đối chiếu với nội dung định nộp      | 5 phút/lượt          | Xác nhận cập nhật đã có trên remote; không chỉ kiểm bản local    |
-|    6 | Mỗi thành viên                               | Link repo nhóm và tài khoản LMS của mình               | Link đã nộp; xác nhận nộp trên LMS                  | 5 phút/lượt          | Mỗi người tự kiểm link và trạng thái nộp                         |
+| Bước | Actor | Input | Output / bàn giao | Thời gian tham chiếu |
+|---:|---|---|---|---:|
+| 1 | Người rà | Đề bài, hướng dẫn nộp, template | Danh sách yêu cầu cần đối chiếu | 10 phút |
+| 2 | Người rà | Tên repo trên GitHub và quy tắc tên | Kết quả kiểm lớp, ngày, tên nhóm | 5 phút |
+| 3 | Người rà | Danh sách thành viên, thư mục individual | Kết quả kiểm tên và sự hiện diện của file cá nhân | 5 phút |
+| 4 | Người rà và tác giả | Báo cáo cá nhân/nhóm, danh sách yêu cầu | Các mục thiếu/trống hoặc cần tác giả làm rõ | 15 phút |
+| 5 | Người rà và người đồng bộ repo | Trạng thái Git, file định nộp, bản remote | Bản cuối đã được đối chiếu với nội dung trên GitHub | 5 phút |
+| 6 | Mỗi thành viên | Link repo và tài khoản LMS của mình | Xác nhận nộp của từng người | 5 phút |
 
-**Bottleneck chính:** Bước 4 mất khoảng 15–20 phút theo mô tả của Nhật; sơ đồ dùng 15 phút để khớp tổng 45 phút trong card. Tổng 45 phút là một tự báo cáo, chưa phải baseline chung của nhóm. Bước 1 còn gây lặp vì yêu cầu phải được gom lại ở mỗi lượt rà.
+**Bottleneck chính:** Bước 4 — mở từng file, tìm từng mục và đối chiếu. Card mô tả bước này khoảng 15–20 phút, sơ đồ dùng mốc 15 phút trong phân rã 45 phút. Việc đọc và gom lại yêu cầu ở bước 1 cũng tạo công lặp.
+
+Tần suất: mỗi lượt chuẩn bị nộp lab. Các thời gian trên tính theo một người thực hiện tác vụ, không cộng 5 phút nộp của mọi thành viên thành thời gian rà của nhóm. Thời gian sửa nội dung lớn và chờ mạng ghi riêng, cùng cách ở hai phương án.
 
 ### 4.2. Quy trình tương lai
 
-Hướng thử trước: gom yêu cầu thành một checklist theo đúng phiên bản đề, dùng Rule kiểm phần xác định được và để con người duyệt phần cần đọc hiểu. **Chưa đưa AI vào luồng chính** vì chưa có bằng chứng Rule không đủ.
+Hướng thử là **checklist đúng đề + Rule kiểm hình thức + con người duyệt nội dung**. Chưa dùng AI trong luồng chính. Công cụ chỉ cần báo đúng file/mục cần xem, không đánh giá thay người học.
 
 ```mermaid
 flowchart TD
-    A["1. Chọn checklist đúng đề và bản repo: 2 phút<br/>CON NGƯỜI"]
-    A --> B["2. Kiểm cấu trúc, tên, mục và liên kết: 1 phút<br/>RULE"]
-    B --> C["3. Đọc báo cáo kiểm tra, phân loại cảnh báo: 4 phút<br/>CON NGƯỜI"]
-    C --> D["4. Đối chiếu nội dung và xử lý mục cần xem lại: 10 phút<br/>CON NGƯỜI"]
-    D --> E["5. Kiểm lại bản cuối và đối chiếu remote: 2 phút<br/>RULE + CON NGƯỜI"]
-    E --> Q{"Còn lỗi hoặc mục chưa xác minh?"}
+    A["1. Chọn checklist và bản repo: 2 phút<br/>CON NGƯỜI"] --> B["2. Chạy kiểm tra hình thức: 1 phút<br/>RULE"]
+    B --> C["3. Phân loại cảnh báo: 4 phút<br/>CON NGƯỜI"]
+    C --> D["4. Đọc nội dung, xử lý mục cần xem: 10 phút<br/>CON NGƯỜI"]
+    D --> E["5. Kiểm lại bản cuối và remote: 2 phút<br/>RULE + CON NGƯỜI"]
+    E --> Q{"Còn lỗi hoặc mục chưa kiểm?"}
     Q -->|Có| D
-    Q -->|Không| F["6. Người nộp duyệt và nộp link LMS: 5 phút<br/>CON NGƯỜI"]
-    B -. Công cụ lỗi / cấu hình không phù hợp .-> G["Quay về checklist và rà từng file thủ công"]
-    G --> E
+    Q -->|Không| F["6. Mỗi thành viên tự nộp LMS: 5 phút<br/>CON NGƯỜI"]
+    B -. Công cụ lỗi hoặc cấu hình không khớp .-> G["Rà thủ công đầy đủ<br/>theo đề và bản repo cuối"]
+    E -. Không chạy lại được công cụ .-> G
+    G --> H{"Người rà xác nhận<br/>hết mục chưa xử lý?"}
+    H -->|Chưa| G
+    H -->|Rồi| F
     style D fill:#155e75,stroke:#164e63,color:#ffffff
     style F fill:#166534,stroke:#14532d,color:#ffffff
 ```
 
-| Bước | Actor / mức xử lý               | Input                                                             | Output / bàn giao                                                                        | Thời gian dự kiến |
-| ---: | ------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------: |
-|    1 | Sinh viên — con người           | Đề đang áp dụng, checklist đã đối chiếu với đề, bản repo hiện tại | Bộ yêu cầu và bản bài làm cần rà                                                         |            2 phút |
-|    2 | Bộ kiểm tra — Rule              | Quy tắc tên/path/heading; danh sách thành viên; file trong repo   | Báo cáo chỉ rõ file/mục và trạng thái: đạt kiểm tra cấu trúc, có lỗi hoặc cần người kiểm |            1 phút |
-|    3 | Sinh viên — con người           | Báo cáo kiểm tra và yêu cầu gốc                                   | Danh sách cảnh báo hợp lệ, mục không áp dụng có lý do và việc giao lại tác giả           |            4 phút |
-|    4 | Người rà và tác giả — con người | Báo cáo, checklist và cảnh báo đã phân loại                       | Nội dung được người rà đối chiếu; tác giả tự sửa mục của mình khi cần                    |           10 phút |
-|    5 | Bộ kiểm tra và người nộp        | Bản cuối sau sửa; kết quả kiểm lại; bản remote                    | Xác nhận kết quả áp dụng cho đúng phiên bản đã đẩy lên GitHub                            |            2 phút |
-|    6 | Mỗi thành viên — con người      | Link repo, kết quả rà cuối và tài khoản LMS                       | Xác nhận nộp link của chính thành viên                                                   |            5 phút |
+| Bước | Actor / mức xử lý | Input | Output / bàn giao | Thời gian dự kiến |
+|---:|---|---|---|---:|
+| 1 | Người rà — con người | Checklist đã đối chiếu với đề; bản repo cần nộp | Phiên bản yêu cầu và dữ liệu đầu vào xác định | 2 phút |
+| 2 | Bộ kiểm tra — Rule | Quy tắc tên/file/heading, danh sách thành viên, các file báo cáo | Danh sách lỗi và mục cần người kiểm, có vị trí cụ thể | 1 phút |
+| 3 | Người rà — con người | Kết quả kiểm và yêu cầu gốc | Cảnh báo hợp lệ; mục không áp dụng có lý do; việc giao tác giả | 4 phút |
+| 4 | Người rà và tác giả — con người | Nội dung báo cáo và danh sách mục cần xem | Người rà đối chiếu nội dung; tác giả tự sửa phần liên quan | 10 phút |
+| 5 | Bộ kiểm tra và người rà | Bản cuối sau sửa, kết quả kiểm lại, bản remote | Kết quả được xác nhận cho đúng commit định nộp | 2 phút |
+| 6 | Mỗi thành viên — con người | Link repo, bản đã rà, tài khoản LMS | Xác nhận nộp của chính thành viên | 5 phút |
 
-**Rule kiểm đến đâu?** Tên và file bắt buộc, heading theo template, ô trống hoặc placeholder đã định nghĩa, đường dẫn ảnh/file nội bộ. Các kiểm tra này cần cấu hình riêng theo đề. Một heading hiện diện hoặc một ô có chữ không đồng nghĩa nội dung đã đạt; công cụ phải chuyển phần đánh giá đó sang người đọc.
+Các mốc trên là kịch bản một vòng, chưa phải cam kết hiệu quả. Nếu phát hiện lỗi ở bước 5, quay lại xử lý rồi kiểm lại. Thời gian vòng lặp phải cộng vào kết quả thử thực tế.
 
-**Cơ sở research:**
+**Rule kiểm được:** Mẫu tên, file bắt buộc, heading, ô trống/placeholder theo quy tắc và đường dẫn nội bộ. Có heading hoặc có chữ không bảo đảm nội dung đạt; phần cần hiểu nghĩa phải được gắn nhãn để người đọc xem.
 
-| Công cụ / pattern                                                                 | Dùng được ở bước nào                                                   | Giới hạn cần giữ                                                                                                                                       |
-| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)              | Kiểm một tập file Markdown theo cấu hình ở bước 2 và 5                 | Lint Markdown không tự kiểm đủ yêu cầu của lab; chỉ bật quy tắc liên quan, tránh làm người dùng mất công sửa phong cách ngoài yêu cầu                  |
-| [markdown-link-check](https://github.com/tcort/markdown-link-check)               | Hỗ trợ kiểm liên kết ở bước 2 và 5                                     | Link phản hồi được chưa chứng minh nội dung nguồn đúng. Timeout hoặc trang cần đăng nhập phải được người dùng mở lại, không kết luận ngay là link hỏng |
-| [GitHub checks](https://docs.github.com/en/pull-requests/reference/status-checks) | Nếu sau này chạy kiểm tra trên GitHub, gắn kết quả với commit ở bước 5 | Cần thiết lập workflow trước; kết quả chỉ có giá trị cho bản được kiểm. Không coi trạng thái xanh là bài đã hoàn tất hoặc đã nộp LMS                   |
+Research ở [mục 3.3](#33-research-giải-pháp-đã-có) cho thấy đã có công cụ lint và kiểm link; kiểm đủ yêu cầu theo đề vẫn cần cấu hình riêng. Có thể thử local trước, chưa cần CI. Công cấu hình checklist ban đầu được đo riêng để đánh giá khả năng dùng lại.
 
-Đây là khả năng tham khảo từ tài liệu chính thức, chưa triển khai hay chạy thử trong repo. Phiên bản thử nhỏ nhất có thể chạy kiểm tra local; chưa cần thiết lập CI hoặc mua công cụ.
+**Boundary:** Công cụ chỉ đọc và báo vấn đề, không tự sửa/xóa file, viết bài, chấm điểm hay nộp LMS. Người dùng duyệt cảnh báo và nội dung; mọi sửa đổi sau lần kiểm phải được kiểm lại. Kết quả đạt kiểm tra hình thức không phải xác nhận bài đã đạt toàn bộ yêu cầu.
 
-**Boundary:** Bộ kiểm tra chỉ đọc và báo vấn đề; không tự sửa/xóa bài, không viết nội dung thay tác giả và không tự nộp LMS. Người rà xác nhận các mục cần đọc hiểu. Bất kỳ sửa đổi nào sau khi kiểm cũng phải được rà lại trước khi nộp. Nếu CP6 đề xuất AI hỗ trợ đọc, đầu ra vẫn là gợi ý để người dùng kiểm, không phải kết luận chấm điểm.
-
-**Phương án quay về:** Công cụ lỗi, không đọc được file hoặc quy tắc không khớp đề → đánh dấu chưa kiểm và rà thủ công theo yêu cầu gốc. Link không kiểm tự động được → mở bằng tài khoản phù hợp. Không bỏ qua cảnh báo để lấy trạng thái đạt. Thời gian fallback và các vòng sửa được cộng vào tổng thời gian thực tế.
+**Phương án quay về:** Công cụ lỗi hoặc cấu hình sai → rà bằng checklist thủ công từ yêu cầu gốc và đối chiếu bản remote; không bắt buộc chạy lại công cụ đang lỗi. Link cần đăng nhập/không truy cập được → người dùng mở và xác minh. Mục chưa kiểm phải giữ trạng thái chưa xác minh, không tự coi là đạt.
 
 ### 4.3. Before / after
 
-| Chỉ số                        | Trước                               | Sau (kỳ vọng)                                       | Ghi chú                                                                                      |
-| ----------------------------- | ----------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Số bước chính                 | 6                                   | 6                                                   | Giữ bước duyệt và nộp; giảm công dò thay vì cố giảm số bước                                  |
-| Tổng thời gian/lượt           | 45 phút theo card cá nhân           | 24 phút nếu đi một vòng                             | 2 + 1 + 4 + 10 + 2 + 5; chưa gồm chuẩn bị công cụ, fallback và vòng sửa bổ sung              |
-| Số bước có con người tham gia | 6/6                                 | 5/6                                                 | Bước 2 chạy bằng Rule; bước 5 kết hợp kiểm lại và người đối chiếu remote                     |
-| Bottleneck                    | Mở từng file dò yêu cầu: 15–20 phút | Người rà đối chiếu nội dung: dự kiến 10 phút        | Vẫn giữ kiểm tra con người; thời gian phải đo lại                                            |
-| Mức giảm thời gian tham chiếu | —                                   | Khoảng 47% nếu đạt 45 → 24 phút                     | Là tính toán theo kịch bản, chưa phải mức cải thiện đã quan sát; mục tiêu CP3 là ít nhất 30% |
-| Lỗi hình thức bị bỏ sót       | Chưa có tỷ lệ baseline              | Không tăng trên cùng bộ yêu cầu                     | Người rà độc lập đối chiếu; không lấy số cảnh báo công cụ làm số lỗi thật                    |
-| Rủi ro mới                    | Phụ thuộc người nhớ và dò đủ        | Cấu hình thiếu quy tắc, báo sai hoặc tin kết quả cũ | Đối chiếu cấu hình với đề, người duyệt cảnh báo và kiểm lại bản cuối                         |
+| Chỉ số | Trước | Sau dự kiến | Cách hiểu |
+|---|---|---|---|
+| Số bước chính | 6 | 6 | Giảm công dò, giữ bước người duyệt và nộp |
+| Thời gian rà, không gồm LMS | 40 phút theo phân rã card | 19 phút/vòng | 2 + 1 + 4 + 10 + 2; là chỉ số so với mục tiêu CP3 |
+| Tổng thời gian rà và nộp | 45 phút theo card | 24 phút/vòng | Gồm thêm 5 phút nộp LMS của một người |
+| Bước có con người tham gia | 6/6 | 5/6 | Bước 2 là Rule; bước 5 có người đối chiếu remote |
+| Bottleneck | Đối chiếu từng mục: 15–20 phút | Đọc và duyệt nội dung: dự kiến 10 phút | Giữ bước kiểm soát chất lượng |
+| Lỗi hình thức còn sót | Chưa có baseline kiểm độc lập | Không tăng trên cùng bộ yêu cầu | Không dùng số cảnh báo máy thay cho số lỗi thật |
+| Rủi ro mới | Quên hoặc dò thiếu mục | Cấu hình thiếu, cảnh báo sai, dùng kết quả cũ | Người duyệt và kiểm đúng bản cuối |
 
-**Cách đo khi thử:** Ghi thời gian từ bắt đầu rà đến xác nhận nộp, cùng số file, số yêu cầu và lỗi còn sót. Nếu dùng hai bộ bài để so sánh, chọn độ phức tạp tương đương; tránh để người dùng rà lại đúng bài vừa nhớ lỗi. Tính cả chạy lại, chờ công cụ và fallback; ghi riêng công thiết lập ban đầu và sửa nội dung lớn ở cả hai cách. Chỉ kết luận nhanh hơn khi số lỗi bỏ sót không tăng.
+Kịch bản 40 → 19 phút tương ứng giảm 52,5% thời gian rà; 45 → 24 phút tương ứng giảm khoảng 47% cả rà và nộp. Đây là phép tính từ giả định, chưa phải hiệu quả đã quan sát. Mục tiêu tối thiểu vẫn là giảm 30% phần rà theo CP3, không bắt buộc phải đạt đúng 19 phút.
+
+**Cách đo:** Chọn ít nhất 3 sinh viên ngoài nhóm đang rà bài thủ công, ghi thời gian trên hai bộ bài có độ phức tạp tương đương; đổi thứ tự thử giữa người tham gia để giảm ảnh hưởng do quen tác vụ. Ghi số file, yêu cầu áp dụng, thời gian từng bước, vòng sửa, công thiết lập và thời gian chờ. Người rà độc lập kiểm lỗi còn sót theo cùng checklist; chỉ kết luận nhanh hơn khi số lỗi không tăng. Đây là kế hoạch thử, chưa có kết quả.
 
 ---
 
 ## 5. Problem Statement v0 (CP5)
 
-| Trường                                                                     | Nội dung |
-| -------------------------------------------------------------------------- | -------- |
-| **Actor**                                                                  |          |
-| **Quy trình**                                                              |          |
-| **Bottleneck**                                                             |          |
-| **Impact**                                                                 |          |
-| **Success Metric** (baseline → target, cách đo)                            |          |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) |          |
+Bản nháp cho nhóm phản biện và xác nhận. Baseline tham chiếu lấy từ card cá nhân, không lấy từ các snapshot minh họa ở CP4.
 
-Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
+| Trường | Nội dung |
+|---|---|
+| **Actor** | Sinh viên phụ trách rà repo bài lab nhóm trước khi nộp, hiện phải mở và đối chiếu báo cáo thủ công |
+| **Quy trình** | Đọc yêu cầu → kiểm tên repo/file → đối chiếu mục trong báo cáo → kiểm bản repo cuối → mỗi thành viên nộp link LMS |
+| **Bottleneck** | Mở từng file, tìm từng mục để đối chiếu yêu cầu; khoảng 15–20 phút trong tự báo cáo của Nhật. Cần đo lại để biết công nằm ở tìm mục, hiểu yêu cầu hay sửa bài |
+| **Impact** | Một tự báo cáo ghi 45 phút cho cả rà và nộp, trong đó khoảng 40 phút là phần rà. Có phản ánh thiếu trường trong report dẫn đến bị trừ điểm, chưa kèm phản hồi chấm để đối chiếu. Chưa suy rộng thời gian hoặc tỷ lệ lỗi cho cả lớp |
+| **Success Metric** | **Baseline:** tạm tham chiếu 40 phút rà/lượt; xác nhận bằng bấm giờ trước thử. **Target:** giảm ít nhất 30% trung vị thời gian rà, tức ≤28 phút nếu baseline xác nhận là 40 phút, đồng thời không tăng lỗi hình thức bỏ sót. **Cách đo:** theo kế hoạch mục 4.3, cùng điểm bắt đầu/kết thúc và bộ yêu cầu áp dụng; kiểm cả thời gian sửa/kiểm lại trong phạm vi tác vụ. Ghi riêng 5 phút nộp LMS và công thiết lập để không làm sai phép so sánh |
+| **Boundary** | Chỉ xét yêu cầu hình thức xác định được: tên, cấu trúc, mục bắt buộc và liên kết. Tác giả chịu trách nhiệm nội dung; người rà duyệt kết quả trước nộp. Bất kỳ công cụ/AI nào được cân nhắc sau này không tự viết bài, sửa/xóa file, chấm chất lượng lập luận hoặc nộp LMS |
 
-- ***
+**Phản biện của AI và điều chỉnh trong bản nháp:**
+
+| Điểm còn yếu | Điều chỉnh | Phản hồi nhóm |
+|---|---|---|
+| 45 phút gồm nộp LMS, khác phạm vi “thời gian rà” ở CP3 | Tách phần rà tham chiếu 40 phút và phần nộp 5 phút; target chính tính trên thời gian rà | Chờ nhóm xác nhận |
+| Có thể nhanh hơn nhưng bỏ sót lỗi hoặc báo đạt khi chưa đọc nội dung | Thêm điều kiện lỗi không tăng và người rà độc lập đối chiếu theo cùng yêu cầu | Chờ nhóm xác nhận |
+| Thời gian có thể chủ yếu là sửa nội dung, không phải kiểm hình thức | Tách thời gian từng bước; đo lại và thu hẹp/đổi pain nếu giả định không đúng | Chờ nhóm xác nhận |
+
+Cách viết v0 giữ vấn đề và tiêu chí thành công tách khỏi lựa chọn giải pháp, theo [Lean UX — Jeff Gothelf](https://jeffgothelf.com/blog/business-problem-statement-opportunity-statement/). Việc vẽ quy trình và đánh giá liệu AI có thêm giá trị được đối chiếu với [Google PAIR — User Needs + Defining Success](https://pair.withgoogle.com/chapter/user-needs/).
+
+---
 
 ## 6. Mức can thiệp AI (CP6)
 
