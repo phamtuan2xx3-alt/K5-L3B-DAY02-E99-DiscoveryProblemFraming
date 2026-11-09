@@ -66,12 +66,14 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 Quy trình nháp hiện tại:
 
-```text
-HIỆN TẠI — 45 phút/lần nộp
-
-[1 Đọc checklist đề bài: 10'] → [2 Kiểm tra tên repo: 5'] → [3 Kiểm tra tên file cá nhân: 5']
-→ [4 Mở từng file markdown dò rubric: 15'] ← BOTTLENECK
-→ [5 Kiểm tra git status không có file rác: 5'] → [6 Submit link LMS: 5']
+```mermaid
+flowchart LR
+    A["1. Đọc checklist đề bài<br/>(10')"] --> B["2. Kiểm tra tên repo<br/>(5')"]
+    B --> C["3. Kiểm tra tên file cá nhân<br/>(5')"]
+    C --> D["4. Mở file dò rubric<br/>(15')<br/>⚠️ BOTTLENECK"]
+    D --> E["5. Kiểm tra git status file rác<br/>(5')"]
+    E --> F["6. Submit link LMS<br/>(5')"]
+    style D fill:#ffebee,stroke:#c62828,stroke-width:2px
 ```
 
 ---
@@ -93,12 +95,13 @@ HIỆN TẠI — 45 phút/lần nộp
 
 Quy trình nháp hiện tại:
 
-```text
-HIỆN TẠI — 28 phút/lần tìm
-
-[1 Gõ từ khóa tìm kiếm: 3'] → [2 Lướt danh sách tin nhắn: 5']
-→ [3 Mở đọc từng thread tìm giải pháp: 10'] ← BOTTLENECK
-→ [4 Copy lệnh ra terminal test thử: 5'] → [5 Hỏi lại nếu không chạy được: 5']
+```mermaid
+flowchart LR
+    A["1. Gõ từ khóa tìm kiếm<br/>(3')"] --> B["2. Lướt danh sách tin nhắn<br/>(5')"]
+    B --> C["3. Đọc thread tìm giải pháp<br/>(10')<br/>⚠️ BOTTLENECK"]
+    C --> D["4. Copy lệnh test thử<br/>(5')"]
+    D --> E["5. Hỏi lại nếu không chạy được<br/>(5')"]
+    style C fill:#ffebee,stroke:#c62828,stroke-width:2px
 ```
 
 ---
@@ -120,12 +123,13 @@ HIỆN TẠI — 28 phút/lần tìm
 
 Quy trình nháp hiện tại:
 
-```text
-HIỆN TẠI — 60 phút/lần tổng hợp
-
-[1 Nhắn tin hỏi tình hình: 5'] → [2 Chờ phản hồi rải rác: 20']
-→ [3 Đọc tin nhắn lọc blocker: 15'] ← BOTTLENECK
-→ [4 Cập nhật bảng Trello/Sheets: 10'] → [5 Họp nhanh xử lý việc kẹt: 10']
+```mermaid
+flowchart LR
+    A["1. Nhắn tin hỏi tình hình<br/>(5')"] --> B["2. Chờ phản hồi rải rác<br/>(20')"]
+    B --> C["3. Đọc tin nhắn lọc blocker<br/>(15')<br/>⚠️ BOTTLENECK"]
+    C --> D["4. Cập nhật bảng Trello/Sheets<br/>(10')"]
+    D --> E["5. Họp nhanh xử lý việc kẹt<br/>(10')"]
+    style C fill:#ffebee,stroke:#c62828,stroke-width:2px
 ```
 
 ---
