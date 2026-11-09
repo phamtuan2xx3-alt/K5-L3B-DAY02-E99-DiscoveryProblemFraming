@@ -413,7 +413,6 @@ Nếu đạt Go, phạm vi đầu tiên là một đề lab, kiểm local và ng
 ## 9. Hạn chế và hướng tiếp theo
 - Baseline 40 phút rà là phân rã từ một card, chưa được đo lại. Các mốc 19 phút rà/24 phút cả nộp ở CP5 là kịch bản, không phải kết quả thử.
 - Chưa có bộ kiểm Rule chạy thật. Tài liệu công cụ và bộ eval chỉ xác định khả năng, phạm vi và cách kiểm dự kiến.
-- Nhóm cần xác nhận lựa chọn candidate, phản biện v0 và phân công duy trì. Chỉ bổ sung kết quả thật vào các bảng sau khi thực hiện.
 - Tiếp tục theo thứ tự kiểm pain → thử mẫu → so với No AI → tính công dùng lại. Không mở rộng sang chấm lập luận hoặc nộp LMS.
 
 ## 10. Tài liệu tham khảo
