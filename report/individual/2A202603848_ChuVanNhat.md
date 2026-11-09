@@ -73,7 +73,7 @@ flowchart LR
     C --> D["4. Mở file dò rubric<br/>(15')<br/>⚠️ BOTTLENECK"]
     D --> E["5. Kiểm tra git status file rác<br/>(5')"]
     E --> F["6. Submit link LMS<br/>(5')"]
-    style D fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style D fill:#b71c1c,stroke:#ff5252,stroke-width:2px,color:#ffffff
 ```
 
 ---
@@ -101,7 +101,7 @@ flowchart LR
     B --> C["3. Đọc thread tìm giải pháp<br/>(10')<br/>⚠️ BOTTLENECK"]
     C --> D["4. Copy lệnh test thử<br/>(5')"]
     D --> E["5. Hỏi lại nếu không chạy được<br/>(5')"]
-    style C fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style C fill:#b71c1c,stroke:#ff5252,stroke-width:2px,color:#ffffff
 ```
 
 ---
@@ -129,7 +129,7 @@ flowchart LR
     B --> C["3. Đọc tin nhắn lọc blocker<br/>(15')<br/>⚠️ BOTTLENECK"]
     C --> D["4. Cập nhật bảng Trello/Sheets<br/>(10')"]
     D --> E["5. Họp nhanh xử lý việc kẹt<br/>(10')"]
-    style C fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style C fill:#b71c1c,stroke:#ff5252,stroke-width:2px,color:#ffffff
 ```
 
 ---
