@@ -184,21 +184,33 @@ flowchart LR
 
 ## 6. Reflection (CP7)
 
-*(Sẽ hoàn thiện sau khi hoàn thành phần làm việc nhóm cùng các thành viên)*
-
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+
+Khi lắng nghe phần pitch của Tuấn về quản lý đơn hàng quán ăn (#1) và của Lâm về theo dõi phân công công việc qua chat Zalo (#4), tôi nhận thấy các bạn đều có những quan sát rất thực tế từ cuộc sống và học tập. Tuy nhiên, bài học lớn nhất tôi rút ra được là tầm quan trọng của việc "hiểu sâu domain" và "tính khả thi của việc thu thập bằng chứng". Bài toán quán ăn của Tuấn rất thực tế nhưng nhóm không thể tiếp cận trực tiếp chủ quán hay quan sát ca làm việc thật ngay trong buổi lab để đo lường baseline thời gian. Trong khi đó, bài toán của Lâm phụ thuộc nhiều vào các thỏa thuận ngầm và ngôn ngữ chat tự do khó xử lý. Điều này giúp tôi nhận thức rõ rằng một bài toán tốt trong giai đoạn Discovery không chỉ cần có nỗi đau thật, mà còn phải nằm trong phạm vi nhóm có dữ liệu và kiểm chứng được ngay.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
 
+Nhóm tôi đã bị "solution-first" rõ rệt nhất ở giai đoạn đầu của CP3 khi chuẩn bị dựng cây Opportunity Solution Tree (OST). Cả ba thành viên đều rất hào hứng và lập tức nghĩ đến việc xây dựng một "Chatbot AI tự động quét repo và sửa bài nộp thay cho sinh viên". Ngay lúc đó, Tuấn đã mở lại tài liệu hướng dẫn và cảnh báo rằng nhóm đang phạm lỗi đưa giải pháp vào tầng opportunity. Nhóm đã dừng lại và tự hỏi: "Nếu hoàn toàn không có AI, nỗi đau cốt lõi của sinh viên nằm ở bước nào?". Nhờ câu hỏi này, nhóm nhận diện được điểm nghẽn thực sự chính là bước mở từng file markdown đối chiếu từng mục với rubric mất 15–20 phút và dễ bị hoa mắt bỏ sót. Nhóm đã lập tức gạch bỏ chữ "Chatbot" khỏi cây OST để tập trung trọn vẹn vào nỗi đau định vị và kiểm tra các mục bắt buộc.
+
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+
+Tôi đã thay đổi hoàn toàn quan điểm sau khi nhận câu hỏi phản biện từ Lâm ở Problem Card #1. Ban đầu, tôi thiết kế giải pháp ở mức Workflow có sử dụng mô hình ngôn ngữ lớn (LLM) để đọc hiểu và phân tích ngữ nghĩa nội dung các file markdown báo cáo. Lâm đã đặt câu hỏi chất vấn: *"Nếu mục tiêu trước mắt chỉ là kiểm tra xem repo có đúng tên không, có đủ file không và các heading bắt buộc có bị bỏ trống hay không, thì một shell script Rule-based có đủ giải quyết chưa, tại sao phải dùng AI?"*. Câu hỏi này đánh trúng vào bản chất vấn đề. Sau khi tranh luận, tôi nhận ra việc kiểm tra hình thức có các quy tắc đúng/sai rất rõ ràng, dùng Rule vừa chạy nhanh trong 1 giây, vừa đảm bảo tính tất định 100% không bị ảo giác, lại không tốn chi phí gọi API hay bảo mật token. Tôi đã chủ động điều chỉnh mức can thiệp đề xuất của mình từ Workflow xuống mức Rule.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
+Quá trình kiểm chứng và research đã mang lại cho tôi hai điều bất ngờ lớn. Thứ nhất, qua các snapshot phỏng vấn ở CP4, tôi nhận thấy có những sinh viên đã xây dựng sẵn template chuẩn và quy trình checklist ổn định; họ chỉ mất khoảng 8 phút cho lượt rà soát cuối cùng và không hề cảm thấy quá tải. Tín hiệu phản bác thực tế này buộc nhóm phải thu hẹp actor mục tiêu vào những người đang rà soát hoàn toàn thủ công, chưa có checklist. Thứ hai, khi thực hiện research công cụ, tôi bất ngờ khi biết các công cụ mã nguồn mở như `markdownlint-cli2` và `markdown-link-check` đã làm rất tốt việc kiểm tra định dạng và đường dẫn hỏng. Bài học lớn cho tôi là không bao giờ được "phát minh lại cái bánh xe", mà phải biết kế thừa những công cụ Rule có sẵn kết hợp với bộ quy tắc riêng của môn học.
+
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
+
+Điều khó khăn nhất đối với tôi và cả nhóm khi hoàn thiện Problem Statement là bóc tách thời gian để định nghĩa Success Metric đo lường được và xác lập ranh giới (Boundary) an toàn. Ban đầu tôi đưa ra con số 45 phút cho toàn bộ quá trình nộp bài. Tuy nhiên, khi xây dựng bản v0 và v1, nhóm phải phân rã rất chi tiết: 40 phút là thời gian rà soát repo (trong đó 15–20 phút là bước nghẽn đối chiếu mục), còn 5 phút là thao tác submit link lên LMS của từng cá nhân. Việc tách riêng 5 phút nộp LMS ra là cực kỳ quan trọng để đảm bảo phép đo giảm 30% thời gian rà soát không bị sai lệch. Bên cạnh đó, việc xác định Boundary — công cụ chỉ phát hiện và cảnh báo vị trí lỗi, tuyệt đối không tự ý sửa file hay nộp bài thay — đòi hỏi nhóm phải cân nhắc rất kỹ về tính toàn vẹn dữ liệu và đạo đức học thuật.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+Nếu có cơ hội làm lại bài lab này từ đầu, tôi sẽ đề xuất nhóm thực hiện phỏng vấn nhanh với ít nhất 2–3 bạn sinh viên lớp khác ngay từ đầu buổi học để có dữ liệu thực tế sớm hơn, thay vì dành nhiều thời gian tranh luận dựa trên giả định. Đồng thời, tôi sẽ phản biện nhóm mạnh hơn ở giai đoạn chấm điểm shortlist: thay vì chỉ chấm điểm theo cảm nhận lý thuyết, tôi sẽ yêu cầu mỗi bạn phải đưa ra ngay một bằng chứng lỗi cụ thể từng bị trừ điểm trong quá khứ. Điều này sẽ giúp nhóm tiết kiệm được rất nhiều thời gian hội tụ và tập trung đào sâu vào quy trình giải pháp nhanh hơn.
+
+**6.7. Hiểu bài:**
+
+Bài toán nhóm tôi giải quyết là việc sinh viên mất trung bình 40 phút rà soát repo bài lab thủ công trước hạn nộp và dễ bị trừ điểm do sai sót hình thức. Quy trình hiện tại gồm 6 bước từ đọc yêu cầu, kiểm tên repo/file, đối chiếu mục trong báo cáo đến nộp link LMS, trong đó bước mở từng file đối chiếu mục là điểm nghẽn lớn nhất mất 15–20 phút. Metric thành công đặt ra là giảm ít nhất 30% thời gian rà soát (từ 40 phút xuống dưới 28 phút) và giữ số lỗi hình thức bị bỏ sót bằng 0. Ranh giới của hệ thống là chỉ kiểm tra các quy tắc hình thức xác định được, tuyệt đối không tự sửa file, không đánh giá nội dung lập luận và không nộp thay người học. Mức can thiệp được chọn là Rule để chạy kiểm tra mẫu tên, file bắt buộc, heading và link nội bộ, kết hợp con người duyệt nội dung, giữ No AI làm đối chứng và phương án quay về. Cuối cùng, nhóm đưa ra quyết định "Not Yet" vì rủi ro Giá trị (Value) còn ở mức cao khi chưa đo lường thực tế trên diện rộng, đồng thời thiết lập 4 ngưỡng dừng cụ thể để sẵn sàng quay về quy trình thủ công nếu công cụ không đem lại lợi ích ròng.
 
 ---
 
