@@ -81,3 +81,27 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 
 -
+
+### NguyenTrongLam-2A202603817
+
+**Phần việc phụ trách:**
+
+- Phụ trách chính Hội tụ nhóm (CP3) & Đánh giá rủi ro (CP6); hỗ trợ Chu Văn Nhật (CP5 Quy trình trước/sau) và hỗ trợ Phạm Quang Tuấn (CP4 Research).
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Chuẩn bị 3 Problem Cards cá nhân (#4 theo dõi chat, #5 so sánh JD, #6 đồng bộ format báo cáo).
+- Phụ trách chính tổng hợp 9 candidate của cả nhóm thành 4 cluster logic (A, B, C, D) và cùng nhóm dựng cây OST tập trung vào Candidate #7 với Outcome duy nhất đo lường được.
+- Thiết lập bảng chấm điểm 7 tiêu chí cho shortlist 3 candidate (#1, #9, #7) và điều phối thảo luận để chốt Candidate #7 (Đối chiếu checklist bài nộp lab) với 33/35 điểm.
+- Hỗ trợ research 3 công cụ/pattern (markdownlint-cli2, markdown-link-check, GitHub checks) và hỗ trợ rà soát quy trình trước/sau, phản biện làm rõ giới hạn Rule vs Con người.
+- Phụ trách chính đánh giá 4 rủi ro lớn theo Marty Cagan ở CP6, đề xuất và bảo vệ quyết định "Not Yet" kèm 4 ngưỡng dừng cụ thể.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- [Báo cáo nhóm — Mục 2: Hội tụ nhóm (CP3)](report/team/group_report.md#2-hội-tụ-nhóm-cp3).
+- [Báo cáo nhóm — Mục 8: Quyết định (CP6)](report/team/group_report.md#8-quyết-định-cp6).
+- File báo cáo cá nhân `report/individual/2A202603817_NguyenTrongLam.md`.
+
+**Điều mình học được từ phần nhóm:**
+
+- Nhận thức rõ ràng về ranh giới giữa nỗi đau thật của người dùng và giải pháp công nghệ: ban đầu mình quá hào hứng với việc dùng AI xử lý ngôn ngữ tự nhiên, nhưng khi cùng nhóm phân tích quy trình và đánh giá rủi ro, mình hiểu rằng giải pháp Rule-based đơn giản hoặc thậm chí quy trình No AI kỷ luật có thể giải quyết bài toán hiệu quả và an toàn hơn nhiều mà không tốn chi phí và rủi ro ảo giác.
