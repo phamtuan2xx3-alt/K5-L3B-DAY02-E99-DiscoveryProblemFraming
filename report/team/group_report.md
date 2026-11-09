@@ -32,42 +32,66 @@ Bảng tổng hợp 9 candidate của Pham Quang Tuan, Nguyen Trong Lam và Chu 
 
 ### 2.2. Cluster
 
+9 candidate được gom thành 4 cluster theo khó khăn chung trong quy trình:
+
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A — Tiếp nhận và bàn giao đơn ăn | #1 Sót/trùng đơn; #2 Sót thay đổi; #3 Giao thiếu/nhầm | Thông tin đơn bị thiếu hoặc không thống nhất giữa người nhận, bếp và người giao |
+| B — Phân công và tiến độ nhóm | #4 Tổng hợp việc/quyết định; #9 Theo dõi tiến độ/blocker | Phải đọc lại chat và hỏi từng người để biết trạng thái công việc |
+| C — Tìm và đối chiếu thông tin | #5 So sánh JD; #8 Tìm giải đáp cũ | Thông tin đã có nhưng nằm rải rác, khó tìm đúng phần cần dùng |
+| D — Kiểm tra đầu ra | #6 Đồng bộ báo cáo; #7 Kiểm checklist bài nộp | Phải rà nhiều phần để phát hiện mục thiếu, sai hoặc chưa nhất quán |
+
+#4 và #9 gần nhau nên shortlist dùng #9 làm đại diện, tập trung vào lúc rà tiến độ trước deadline. Với cluster A, chọn #1 để xét riêng bước tiếp nhận đơn, tránh ôm cả vận hành quán. #6 và #7 cùng cluster nhưng thời gian sửa báo cáo và thời gian kiểm bài nộp được xem riêng.
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
-Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
+Cây tập trung vào candidate #7, hướng được ưu tiên theo bảng điểm ở mục 2.4. Các pain dưới đây sẽ được kiểm chứng ở CP4.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm ít nhất 30% thời gian rà bài lab trước khi nộp,
+         đồng thời không tăng số lỗi hình thức bị bỏ sót.
+│
+├── Opportunity A: Mất công tìm và đọc lại các yêu cầu nộp bài
+│   └── Quy tắc tên repo, tên file và mục bắt buộc nằm ở nhiều tài liệu
+│
+├── Opportunity B: Mất thời gian mở từng file để đối chiếu yêu cầu
+│   └── Phải kiểm cả cấu trúc thư mục lẫn các mục trong báo cáo
+│
+└── Opportunity C: Vẫn có thể sót mục sau khi đã rà thủ công
+    └── Nhật báo cáo một lần nhóm bị trừ điểm vì thiếu trường trong report
 ```
 
-Những ý đã gạch bỏ vì là solution đội lốt opportunity:
+Mức giảm 30% là mục tiêu đề xuất, chưa phải kết quả đo. Phạm vi đang xét là tên, cấu trúc và mục bắt buộc; chất lượng lập luận vẫn cần người đọc đánh giá.
 
--
+**Các ý loại khỏi tầng opportunity:** “chatbot kiểm bài”, “script quét repo”, “dashboard checklist”. Đây là cách giải quyết; pain cần giữ là mất thời gian đối chiếu và bỏ sót yêu cầu.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
+Shortlist gồm #1, #9 và #7: ba tác vụ có actor rõ, có thể khoanh phạm vi và đo thời gian/lỗi. #5 cần thêm cách đánh giá năng lực so với JD; #6 cần tách công sửa nội dung khỏi định dạng; #8 còn vướng khả năng lấy dữ liệu chat và xác định câu trả lời còn phù hợp.
+
+Chấm 7 tiêu chí với trọng số bằng nhau, tối đa 35 điểm. Điểm 1 là chưa rõ/chưa có cơ sở; 3 là đã mô tả được nhưng còn cần xác minh; 5 là rõ và thuận lợi để kiểm trong lab. Riêng bằng chứng: tự báo cáo cụ thể được 3; muốn đạt 5 cần có mẫu/log và nguồn xác nhận bổ sung. Phương án No AI/Rule đủ dùng vẫn có thể đạt điểm cao.
+
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| #1 — Bỏ sót/trùng đơn qua tin nhắn | 5 | 4 | 1 | 4 | 3 | 5 | 2 | **24** |
+| #9 — Nắm tiến độ và blocker trước deadline | 4 | 4 | 3 | 4 | 4 | 5 | 5 | **29** |
+| #7 — Đối chiếu checklist bài nộp lab | 5 | 5 | 3 | 5 | 5 | 5 | 5 | **33** |
 
-**Candidate được chọn:**
+**Lý do chấm:**
 
-**Vì sao chọn:**
+- **#1 — 24/35:** Tác vụ nhận đơn cụ thể, nhưng thời gian mới là giả định và chưa có chủ quán xác nhận. Cần tiếp cận quán để quan sát, nên điểm bằng chứng và hiểu domain thấp hơn hai hướng còn lại.
+- **#9 — 29/35:** Nhóm quen việc làm đồ án và có tình huống chậm task do thành viên cung cấp. Tuy nhiên, việc biết blocker còn phụ thuộc người gặp khó có báo tin hay không; cần xác định nguồn cập nhật đáng tin cậy.
+- **#7 — 33/35:** Có repo và yêu cầu để đối chiếu ngay, dễ đo thời gian rà và lỗi bỏ sót. Nhật cung cấp trải nghiệm cụ thể nhưng chưa kèm log hoặc phản hồi chấm, nên bằng chứng chỉ đạt 3/5.
 
-**Vì sao loại các candidate còn lại:**
+**Hướng ưu tiên theo điểm:** **#7 — Đối chiếu checklist bài nộp lab**; nhóm cần xác nhận lựa chọn trước CP4.
 
-**Xử lý bất đồng (nếu có):**
+**Vì sao ưu tiên:** Phạm vi rõ, dữ liệu đầu vào sẵn có và dễ tìm người cùng gặp tác vụ để hỏi. Nhóm có thể kiểm tra nhu cầu trước khi quyết định checklist, Rule hay AI hỗ trợ.
+
+**Vì sao chưa chọn hai hướng còn lại:** #9 khó phát hiện vướng mắc chưa được thành viên thông báo; #1 chưa có dữ liệu thực tế và điều kiện quan sát quán. Giữ cả hai làm phương án dự phòng.
+
+**Cần làm rõ ở CP4:** Với #7, 35–45 phút là cả lượt rà, còn 15–20 phút trong card cá nhân là riêng bước đối chiếu file. Cần đo lại cùng phạm vi, kiểm tra trường hợp bị trừ điểm và hỏi người ngoài nhóm xem cách rà hiện tại đã đủ tốt chưa.
+
+**Xử lý bất đồng:** Chưa ghi nhận. Nếu nhóm chọn khác thứ tự điểm, bổ sung lý do và điều kiện thực tế dẫn đến lựa chọn đó.
 
 ---
 
