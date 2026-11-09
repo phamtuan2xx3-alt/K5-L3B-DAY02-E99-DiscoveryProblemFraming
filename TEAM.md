@@ -13,7 +13,7 @@
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
 | 1 | Chu Văn Nhật | 2A202603848 | | chunhat |
-| 2 | Pham Quang Tuan | 2A202603824 | | |
+| 2 | Pham Quang Tuan | 2A202603824 | |phamtuan2xx3-alt|
 | 3 | Nguyễn Trọng Lâm | 202603817 | | NTLam108 |
 | 4 | | | | |
 
