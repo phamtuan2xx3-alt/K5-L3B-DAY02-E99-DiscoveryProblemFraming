@@ -185,9 +185,6 @@ Vai trò: **Nhóm trưởng, phụ trách Kiểm chứng (CP4) & Bộ Eval**. N�
 ---
 
 ## 5. Dùng AI
-
-Đối chiếu [quy định sử dụng AI](../../RULES.md#2-ai-và-công-cụ): CP1 chỉ gợi ý sau lượt tự scan; CP2 dùng để phản biện; CP4 research và CP5 Mermaid được hỗ trợ; Problem Statement và quyết định chỉ dùng AI phản biện. Pitch/challenge, phỏng vấn thực tế và reflection do người học thực hiện. Bảng ghi cách đã dùng trong quá trình chuẩn bị, không mặc định bản nháp đã đáp ứng các giới hạn này.
-
 | Checkpoint                     | Tôi dùng AI để làm gì?                                                                                                 | AI hữu ích ở đâu?                                                      | AI sai hoặc hời hợt ở đâu?                                                                                   | Tôi sửa gì / phần cần tự hoàn thiện?                                                                                                                 |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CP1 Scan                       | Research và gợi ý candidate, diễn đạt Job Story                                                                        | Có các tình huống cụ thể quanh tiếp nhận và bàn giao đơn               | Nguồn công khai không chứng minh pain của chính tôi; chưa có lượt tự scan được ghi nhận trước research       | Tôi chọn hướng quán ăn dễ minh họa; vẫn cần đối chiếu trải nghiệm và bổ sung dấu hiệu thật để đúng yêu cầu CP1                                       |
