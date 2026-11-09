@@ -4,7 +4,7 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: E99
 - Candidate problem nhóm chọn (1 câu):
 - Quyết định cuối (Go / Not Yet / No-Go):
 
@@ -12,7 +12,7 @@
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | | | | |
+| 1 | Chu Văn Nhật | 2A202603848 | | chunhat |
 | 2 | | | | |
 | 3 | | | | |
 | 4 | | | | |
@@ -36,6 +36,24 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 ## Cá nhân
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
+
+### ChuVanNhat-2A202603848
+
+**Phần việc phụ trách:**
+
+- Chuẩn bị Problem Card #1 (Kiểm tra checklist bài nộp lab), tham gia phản biện CP3 và hỗ trợ xây dựng quy trình/Problem Statement.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Hoàn thành file cá nhân CP1 (10 problems) & CP2 (3 Problem Cards chi tiết).
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `report/individual/2A202603848_ChuVanNhat.md`
+
+**Điều mình học được từ phần nhóm:**
+
+-
 
 ### HoVaTen-MSSV
 
