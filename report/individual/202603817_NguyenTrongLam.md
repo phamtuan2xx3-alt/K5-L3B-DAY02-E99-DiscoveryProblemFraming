@@ -20,14 +20,14 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 |   # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 | --: | --------- | ----------------------------- | ------------------ | --------------------------------------------------------- |
-|   1 |           |                               |                    |                                                           |
-|   2 |           |                               |                    |                                                           |
-|   3 |           |                               |                    |                                                           |
-|   4 |           |                               |                    |                                                           |
-|   5 |           |                               |                    |                                                           |
-|   6 |           |                               |                    |                                                           |
-|   7 |           |                               |                    |                                                           |
-|   8 |           |                               |                    |                                                           |
+|   1 | Lặp lại | Khi giảng viên yêu cầu sửa fomat hoặc nội dung báo cáo, tôi muốn cập nhật một chỗ mà tất cả tự đồng bộ(mục lục, hình trích dẫn), để khỏi chỉnh tay từng trang | Sinh viên làm báo cáo đồ án, khóa luận |2-5 giờ mỗi vòng sửa; 2-3 vòng mỗi báo cáo; gần như mọi sinh viên cuối khóa đều gặp phải|
+|   2 | Tốn thời gian | Khi cần làm giấy tờ (tạm trú, bảo hiểm, xin xác nhận), tôi muốn biết chính xác cần những gì, nộp ở đâu, theo thứ tự nào, để không đi lại nhiều lần|Gần như mọi người| 2-6 giờ/thủ tục; 1-2 lần/năm; thường phải đi hoặc nộp lại 2-3 lần vì thiếu giấy|
+|   3 | Cần đọc, tổng hợp nhiều thông tin | Khi chuẩn bị đi xin việc, tôi muốn so sánh nhanh yêu cầu của nhiều công ty và biết mình thiếu kỹ năng gì, để tập trung ôn đúng thứ.| Sinh viên năm cuối trong giai đoạn xin việc| đọc cập nhật tin tuyển dụng 5-10 giờ/tuần, apply và phỏng vấn trong 1-2 tháng|
+|   4 | Lặp lại | Khi thêm một endpoint hay entity mới, tôi muốn có sẵn khung code và test theo đúng convention của dự án, để tập trung vào logic nghiệp vụ| Fresher backend, sinh viên| 30-60 phút/endpoint; 5-10 lần/tuần, các commit có diff gần giống nhau, file test copy-paste|
+|   5 | Pain từ người khác | Khi nhóm trao đổi hàng trăm tin nhắn mỗi tuần, tôi muốn biết ai đã nhận việc gì, việc nào chưa xong và quyết định nào đã chốt| Nhóm trưởng, thành viên bị giao việc mơ hồ| 2-3 giờ/tuần theo dõi và nhắc việc; 5-10 lần nhắc/tuần|
+|   6 |Tốn thời gian|Khi cần chuyển chỗ ở, tôi muốn lọc nhanh tin đăng đúng giá, đúng khu vực và không lừa đảo, để không phải xem 10 phòng mới chọn được một|Sinh viên, người ra thành phố đi làm|10-20 giờ/lần chuyển; 1-2 lần/năm                                                           |
+|   7 | Pain từ người khác | Khi người thân gặp rắc rối với điện thoại, app ngân hàng hay tin nhắn lừa đảo, tôi muốn họ tự xử lý được hoặc nhận biết nguy hiểm, để khỏi gọi tôi giữa giờ làm.|Nạn nhân của lừa đảo qua mạng | 3-5 cuộc gọi/tuần; 10-30 phút/cuộc; từng có người thân bị lừa đảo|
+|   8 | Cần đọc, tổng hợp nhiều thông tin | Khi nhận kết quả khám hoặc có triệu chứng lạ, tôi muốn hiểu các chỉ số nghĩa là gì và nên hỏi bác sĩ điều gì, để không lo lắng vô cớ hoặc chủ quan|Gần như mọi người|chụp ảnh kết quả xét nghiệm gửi hỏi người quen|
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
