@@ -6,7 +6,7 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên: Pham Quang Tuan
+- Họ tên: Phạm Quang Tuấn
 - MSSV: 2A202603824
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm: E99
