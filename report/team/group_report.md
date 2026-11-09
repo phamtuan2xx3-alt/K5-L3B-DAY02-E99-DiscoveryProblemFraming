@@ -121,9 +121,6 @@ Thang bằng chứng: 1 = chưa có; 2 = có tín hiệu gián tiếp; 3 = có t
 **Ưu tiên:** #1 và #2 kiểm pain và cách đang xử lý; #3 kiểm nguy cơ người dùng tin nhầm; #4 kiểm khả năng làm một mẫu nhỏ. Chưa đề xuất AI trước khi biết các yêu cầu nào Rule đã xử lý đủ.
 
 ### 3.2. Kiểm chứng
-
-> **Ghi chú: Ba snapshot dưới đây là giả lập; nhân vật, lời thoại và số liệu được dựng để minh họa, không phải phỏng vấn người thật và không được tính là bằng chứng kiểm chứng.**
-
 #### Snapshot 1 — Sinh viên rà bài nhóm bằng tay
 
 | Trường                                | Nội dung                                                                                                                 |
