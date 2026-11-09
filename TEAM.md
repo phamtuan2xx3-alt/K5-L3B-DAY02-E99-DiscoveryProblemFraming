@@ -14,7 +14,7 @@
 |---:|---|---|---|---|
 | 1 | Chu Văn Nhật | 2A202603848 | | chunhat |
 | 2 | Pham Quang Tuan | 2A202603824 | | |
-| 3 | | | | |
+| 3 | Nguyễn Trọng Lâm | 202603817 | | NTLam108 |
 | 4 | | | | |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.

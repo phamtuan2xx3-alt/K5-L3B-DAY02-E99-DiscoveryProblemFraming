@@ -158,9 +158,9 @@ flowchart LR
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | Pitch Card #1 (Kiểm tra checklist bài nộp lab) | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
+| Pitch Problem Card | Pitch Card #1 (Kiểm tra checklist bài nộp lab), Card #2 (Tìm giải đáp trên Discord) và Card #3 (Theo dõi blocker nhóm) | Cả 3 card được đưa vào bảng Pitch nhóm (mục 2.1) |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: Hỏi Lâm về Candidate #4: "Các thỏa thuận ngầm hoặc tiếng lóng trong chat Zalo có làm công cụ hiểu sai không?" và Candidate #6: "Dùng tính năng Styles trong Word/LaTeX có đủ giải quyết bài này mà không cần AI không?" | Nhóm nhận thấy bài #6 có thể giải quyết bằng No AI/Rule, còn bài #4 cần xử lý ngôn ngữ tự nhiên phức tạp |
+| Nhận phản biện | Câu hỏi tôi nhận được: Lâm hỏi ở Card #1: "Nếu chỉ cần kiểm tra tên file/folder thì một shell script (Rule) có đủ chưa, tại sao cần AI?" | Tôi đã sửa gì: Làm rõ ranh giới Rule (kiểm tra tồn tại và tên file) và Workflow có AI (đọc hiểu ngữ nghĩa nội dung markdown xem có bị để trống hay trả lời cụt lủn không) |
 | Gom cluster / cây OST | | |
 | Chọn candidate problem | | |
 | Kiểm chứng / research | | |

@@ -5,7 +5,7 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: E99
 - Thành viên: xem `TEAM.md`
 - Candidate problem được chọn (1 câu):
 - Quyết định cuối: Go / Not Yet / No-Go
@@ -16,19 +16,17 @@
 
 ### 2.1. Pitch
 
-Ba candidate của Pham Quang Tuan (2A202603824), tham chiếu [Problem Cards cá nhân](../individual/2A202603824_PhamQuangTuan.md#3-top-3-problem-cards--quy-trình-nháp-cp2). Bottleneck hiện là giả thuyết cần kiểm chứng; bổ sung câu hỏi và người phản biện sau buổi pitch nhóm.
-
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | Pham Quang Tuan — 2A202603824 | **Bỏ sót hoặc ghi trùng đơn qua tin nhắn:** Khi nhiều khách nhắn đặt món giờ trưa, tôi muốn biết hội thoại nào đã thành đơn được xác nhận, để không bỏ quên khách hoặc ghi trùng đơn. | Chủ quán hoặc nhân viên nhận đơn, đồng thời phục vụ tại quầy | Đọc và tổng hợp chuỗi tin khi liên tục bị gián đoạn; cần xác minh điểm sót ở đọc tin, ghi phiếu hay chuyển bếp | Chưa ghi nhận phản biện nhóm |
-| 2 | Pham Quang Tuan — 2A202603824 | **Thay đổi đơn không tới người chuẩn bị:** Khi khách đổi món sau khi đã chuyển đơn, tôi muốn biết thay đổi thuộc đơn nào và bếp đã làm tới đâu, để xử lý đúng lúc và tránh dùng thông tin cũ. | Nhân viên nhận tin và người chuẩn bị đang dùng phiếu đã chốt | Xác định trạng thái chế biến và phiên bản phiếu bếp đang dùng trước khi chấp nhận thay đổi | Chưa ghi nhận phản biện nhóm |
-| 3 | Pham Quang Tuan — 2A202603824 | **Giao thiếu hoặc nhầm túi đồ:** Khi giao túi đồ cho khách hoặc người tới lấy, tôi muốn đối chiếu đúng đơn và đủ món, để không giao nhầm hoặc thiếu món. | Nhân viên đóng gói và bàn giao đơn mang đi | Đối chiếu món, số lượng và ghi chú với phiếu trước khi bàn giao | Chưa ghi nhận phản biện nhóm |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
+| 1 | Pham Quang Tuan — 2A202603824 | **Bỏ sót hoặc ghi trùng đơn qua tin nhắn:** Khi nhiều khách nhắn đặt món giờ trưa, tôi muốn biết hội thoại nào đã thành đơn được xác nhận, để không bỏ quên khách hoặc ghi trùng đơn. | Chủ quán hoặc nhân viên nhận đơn, đồng thời phục vụ tại quầy | Đọc và tổng hợp chuỗi tin khi liên tục bị gián đoạn; cần xác minh điểm sót ở đọc tin, ghi phiếu hay chuyển bếp | "Nếu quán dùng form đặt món cố định (No AI) thì khách có chịu dùng không?" (Nhật hỏi) |
+| 2 | Pham Quang Tuan — 2A202603824 | **Thay đổi đơn không tới người chuẩn bị:** Khi khách đổi món sau khi đã chuyển đơn, tôi muốn biết thay đổi thuộc đơn nào và bếp đã làm tới đâu, để xử lý đúng lúc và tránh dùng thông tin cũ. | Nhân viên nhận tin và người chuẩn bị đang dùng phiếu đã chốt | Xác định trạng thái chế biến và phiên bản phiếu bếp đang dùng trước khi chấp nhận thay đổi | "Làm sao kết nối trạng thái của bếp theo thời gian thực nếu bếp không dùng màn hình KDS?" (Lâm hỏi) |
+| 3 | Pham Quang Tuan — 2A202603824 | **Giao thiếu hoặc nhầm túi đồ:** Khi giao túi đồ cho khách hoặc người tới lấy, tôi muốn đối chiếu đúng đơn và đủ món, để không giao nhầm hoặc thiếu món. | Nhân viên đóng gói và bàn giao đơn mang đi | Đối chiếu món, số lượng và ghi chú với phiếu trước khi bàn giao | "In bill dán lên túi đồ và tick kiểm thủ công (Rule) đã đủ giải quyết chưa?" (Nhật hỏi) |
+| 4 | Chu Văn Nhật — 2A202603848 | **Kiểm tra checklist bài nộp lab:** Khi nộp bài lab môn AI, tôi muốn đối chiếu nhanh toàn bộ cấu trúc repo và checklist, để không bị trừ điểm oan do sai sót hình thức. | Sinh viên thực hành AI/CNTT có nộp bài qua GitHub/LMS | Mở từng file markdown đọc lướt dò rubric (15–20 phút) | "Nếu chỉ cần kiểm tra tên file/folder thì một shell script (Rule) có đủ chưa, tại sao cần AI?" (Lâm hỏi) |
+| 5 | Chu Văn Nhật — 2A202603848 | **Tìm giải đáp lỗi cũ trên chat lớp:** Khi gặp lỗi kỹ thuật đề lab, tôi muốn tìm lại nhanh giải đáp trợ giảng từng trả lời trên kênh chat lớp, để tự sửa ngay không phải hỏi lại. | Sinh viên thực hành lab trên lớp hoặc tại nhà | Mở từng thread chat đọc nội dung tìm giải pháp phù hợp (10 phút) | "Nếu không có quyền admin bot Discord/Teams thì làm sao trích xuất được dữ liệu chat tự động?" (Tuấn hỏi) |
+| 6 | Chu Văn Nhật — 2A202603848 | **Theo dõi blocker đồ án nhóm:** Khi sắp đến hạn nộp đồ án, tôi muốn biết chính xác ai đã làm xong phần nào và ai đang kẹt blocker, để chủ động hỗ trợ kịp deadline. | Trưởng nhóm đồ án môn học | Đọc và tổng hợp các tin nhắn chat rời rạc để lọc blocker (15 phút) | "Dùng bảng Kanban (Trello/Notion) chuẩn có giải quyết được không nếu thành viên lười cập nhật?" (Lâm hỏi) |
+| 7 | Nguyễn Trọng Lâm — 202603817 | **Theo dõi phân công việc nhóm qua chat:** Khi nhóm trao đổi hàng trăm tin nhắn mỗi tuần, tôi muốn biết ai đã nhận việc gì, việc nào chưa xong, để không phải nhắn hỏi từng người. | Nhóm trưởng đồ án (4–5 người) | Lướt lại chat và nhắn hỏi từng người (20–30 phút/lần, lặp 5–10 lần/tuần) | "Các thỏa thuận ngầm hoặc tiếng lóng trong chat Zalo có làm công cụ hiểu sai không?" (Nhật hỏi) |
+| 8 | Nguyễn Trọng Lâm — 202603817 | **So sánh JD và tìm kỹ năng thiếu:** Khi chuẩn bị đi xin việc, tôi muốn so sánh nhanh yêu cầu nhiều công ty và biết mình thiếu kỹ năng gì, để tập trung ôn đúng thứ. | Sinh viên CNTT năm cuối xin thực tập/fresher | Đọc và đối chiếu JD với CV của mình (20–30 phút/JD, 5–10 giờ/tuần) | "Mỗi công ty viết JD một kiểu và có yêu cầu ngầm, làm sao xếp hạng kỹ năng chuẩn xác được?" (Tuấn hỏi) |
+| 9 | Nguyễn Trọng Lâm — 202603817 | **Sửa format báo cáo nhiều vòng:** Khi giảng viên yêu cầu sửa format báo cáo, tôi muốn cập nhật một chỗ mà tất cả tự đồng bộ, để khỏi chỉnh tay từng trang. | Sinh viên làm báo cáo đồ án, khóa luận (file 50–100 trang) | Chỉnh format và đồng bộ mục lục, hình, trích dẫn (2–5 giờ/vòng, 2–3 vòng/báo cáo) | "Dùng tính năng Styles, Caption và References tự động trong Word/LaTeX có đủ giải quyết bài này mà không cần AI không?" (Nhật hỏi) |
 | 10 | | | | | |
 | 11 | | | | | |
 | 12 | | | | | |
@@ -79,7 +77,7 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 ### 3.1. Assumption Map
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
-|---:|---|---|---:|---:|---|
+|---:|---|---|---|---|---|
 | 1 | | | | | |
 | 2 | | | | | |
 | 3 | | | | | |
@@ -100,8 +98,6 @@ Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file 
 | Trường | Nội dung |
 |---|---|
 | Người được hỏi (vai trò, không ghi tên thật) | |
-| Thời điểm kiểm chứng | |
-| Cách hỏi (trực tiếp / gọi điện / survey / poll) | |
 | Câu nói đáng nhớ nhất (nguyên văn) | |
 | Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
 | Hiện đang xử lý bằng cách nào (workaround)? | |
