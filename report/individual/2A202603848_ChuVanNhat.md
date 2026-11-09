@@ -154,20 +154,18 @@ flowchart LR
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-*(Sẽ điền sau khi thực hiện thảo luận nhóm ở CP3–CP6)*
-
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
 | Pitch Problem Card | Pitch Card #1 (Kiểm tra checklist bài nộp lab), Card #2 (Tìm giải đáp trên Discord) và Card #3 (Theo dõi blocker nhóm) | Cả 3 card được đưa vào bảng Pitch nhóm (mục 2.1) |
 | Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: Hỏi Lâm về Candidate #4: "Các thỏa thuận ngầm hoặc tiếng lóng trong chat Zalo có làm công cụ hiểu sai không?" và Candidate #6: "Dùng tính năng Styles trong Word/LaTeX có đủ giải quyết bài này mà không cần AI không?" | Nhóm nhận thấy bài #6 có thể giải quyết bằng No AI/Rule, còn bài #4 cần xử lý ngôn ngữ tự nhiên phức tạp |
 | Nhận phản biện | Câu hỏi tôi nhận được: Lâm hỏi ở Card #1: "Nếu chỉ cần kiểm tra tên file/folder thì một shell script (Rule) có đủ chưa, tại sao cần AI?" | Tôi đã sửa gì: Làm rõ ranh giới Rule (kiểm tra tồn tại và tên file) và Workflow có AI (đọc hiểu ngữ nghĩa nội dung markdown xem có bị để trống hay trả lời cụt lủn không) |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Gom cluster / cây OST | Đề xuất gom Candidate #6 và Candidate #7 vào chung Cluster D (Kiểm tra đầu ra); góp ý xác định Outcome duy nhất là giảm 30% thời gian rà bài lab mà không tăng lỗi bỏ sót | Nhóm thống nhất cấu trúc 4 cluster và xây dựng cây OST với Outcome có metric rõ ràng thay vì mục tiêu mơ hồ |
+| Chọn candidate problem | Trình bày lý do bảo vệ Candidate #7 (Đối chiếu checklist lab): dữ liệu đầu vào sẵn có trong chính buổi học, quy trình rõ, dễ đo lường và vừa sức làm trong một buổi lab | Nhóm thống nhất chấm Candidate #7 đạt điểm cao nhất (33/35) và chọn làm bài toán chung của nhóm |
+| Kiểm chứng / research | Cung cấp trải nghiệm thực tế về việc từng bị trừ 5 điểm do thiếu trường report để Tuấn đưa vào Assumption Map (#1, #2); hỗ trợ review bảng so sánh 3 công cụ lint | Xác định được pain thật sự nằm ở công đoạn định vị và đối chiếu mục, không phải ở việc sửa bài |
+| Quy trình nhóm | Phụ trách chính: Trực tiếp vẽ 2 sơ đồ Mermaid (Quy trình hiện tại và Quy trình tương lai với Rule), phân rã chi tiết 6 bước kèm số phút và xác định bottleneck bước 4 (15 phút) | Nhóm có sơ đồ trực quan rõ ràng, làm rõ vai trò Con người / Rule và thiết lập phương án fallback khi công cụ gặp sự cố |
+| Problem Statement | Soạn thảo bản dự thảo Problem Statement v0 gồm 6 trường; tiếp thu phản biện của AI để tách riêng 5 phút nộp LMS ra khỏi thời gian rà bài | Nhóm có bản Problem Statement v0 chuẩn chỉnh, định nghĩa Success Metric đo lường được (giảm từ 40' xuống ≤28') |
+| Mức can thiệp AI | Thảo luận cùng nhóm về ma trận phức tạp/mơ hồ; ủng hộ phương án chọn mức Rule và giữ No AI làm đối chứng/fallback thay vì vội vã dùng LLM/Agent | Tránh được bẫy lạm dụng AI khi quy tắc kiểm tra hình thức có luồng cố định; tiết kiệm chi phí và không phụ thuộc API ngoài |
+| Quyết định | Thống nhất với Lâm và Tuấn chọn quyết định "Not Yet"; góp ý bổ sung ngưỡng dừng: nếu công cụ phát sinh cảnh báo sai làm tăng thời gian thì lập tức quay về No AI | Nhóm có quyết định thực tế, thận trọng kèm 4 ngưỡng dừng đo được cụ thể |
 
 ---
 
@@ -177,10 +175,10 @@ flowchart LR
 |---|---|---|---|---|
 | CP1 Scan | Gợi ý thêm các vấn đề thường gặp của sinh viên công nghệ | Giúp nhận diện thêm vấn đề tính toán chi phí nhóm (#9) và tổng hợp báo cáo tiến độ (#10) | Gợi ý các ý tưởng giải pháp chung chung ("làm chatbot AI quản lý đồ án") | Loại bỏ các giải pháp viển vông, tự viết lại theo trải nghiệm thật dạng Job Story và bổ sung số liệu đo đạc thực tế |
 | CP2 Problem Card | Đóng vai PM hoài nghi để phản biện Card #1 | Bắt lỗi về baseline thời gian và cảnh báo nguy cơ lạm dụng AI khi script đơn giản có thể giải quyết được | Đề xuất giải pháp xây agent tự động nộp bài lên LMS thay cho sinh viên | Bác bỏ đề xuất tự động nộp bài vì vi phạm quy chế thi/kiểm tra; chỉ giữ AI ở vai trò hỗ trợ kiểm tra (HITL) |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP4 Research | Tra cứu các công cụ mã nguồn mở kiểm tra Markdown và cú pháp link | Gợi ý nhanh các công cụ phổ biến như markdownlint và markdown-link-check | Đưa ra một số link tài liệu cũ hoặc link không còn hoạt động | Tự mở và kiểm tra từng đường dẫn chính thức trên GitHub Docs, đối chiếu tính năng thực tế |
+| CP5 Quy trình | Chuyển đổi các bước quy trình thành cú pháp Mermaid Flowchart | Hỗ trợ sinh nhanh code sơ đồ Mermaid và tạo màu phân biệt cho bước bottleneck | Vẽ thiếu nhánh rẽ fallback khi công cụ kiểm tra bị lỗi hoặc file bị hỏng | Bổ sung nhánh quyết định và luồng quay về rà soát thủ công (fallback) an toàn |
+| CP5–6 Problem Statement | Phản biện bản nháp Problem Statement v0 và v1 | Chỉ ra điểm mơ hồ khi gộp thời gian nộp LMS vào thời gian rà soát bài | Khuyên nên đặt target "0% lỗi" phi thực tế | Sửa lại metric thành "giảm ≥30% thời gian rà và không tăng số lỗi bỏ sót", tách riêng 5 phút nộp LMS |
+| CP6 Mức can thiệp / quyết định | So sánh ưu/nhược điểm giữa Rule và Workflow trong bài toán kiểm tra repo | Làm rõ sự khác nhau giữa việc kiểm tra cấu trúc (Rule) và đọc hiểu nội dung (Workflow) | AI thiên vị hướng dùng mô hình LLM để tóm tắt nội dung báo cáo | Kiên quyết chọn Rule để thử nghiệm vì bài toán rà hình thức có quy tắc cố định, không cần đến AI |
 
 ---
 
