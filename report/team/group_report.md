@@ -16,11 +16,13 @@
 
 ### 2.1. Pitch
 
+Ba candidate của Pham Quang Tuan (2A202603824), tham chiếu [Problem Cards cá nhân](../individual/2A202603824_PhamQuangTuan.md#3-top-3-problem-cards--quy-trình-nháp-cp2). Bottleneck hiện là giả thuyết cần kiểm chứng; bổ sung câu hỏi và người phản biện sau buổi pitch nhóm.
+
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
+| 1 | Pham Quang Tuan — 2A202603824 | **Bỏ sót hoặc ghi trùng đơn qua tin nhắn:** Khi nhiều khách nhắn đặt món giờ trưa, tôi muốn biết hội thoại nào đã thành đơn được xác nhận, để không bỏ quên khách hoặc ghi trùng đơn. | Chủ quán hoặc nhân viên nhận đơn, đồng thời phục vụ tại quầy | Đọc và tổng hợp chuỗi tin khi liên tục bị gián đoạn; cần xác minh điểm sót ở đọc tin, ghi phiếu hay chuyển bếp | Chưa ghi nhận phản biện nhóm |
+| 2 | Pham Quang Tuan — 2A202603824 | **Thay đổi đơn không tới người chuẩn bị:** Khi khách đổi món sau khi đã chuyển đơn, tôi muốn biết thay đổi thuộc đơn nào và bếp đã làm tới đâu, để xử lý đúng lúc và tránh dùng thông tin cũ. | Nhân viên nhận tin và người chuẩn bị đang dùng phiếu đã chốt | Xác định trạng thái chế biến và phiên bản phiếu bếp đang dùng trước khi chấp nhận thay đổi | Chưa ghi nhận phản biện nhóm |
+| 3 | Pham Quang Tuan — 2A202603824 | **Giao thiếu hoặc nhầm túi đồ:** Khi giao túi đồ cho khách hoặc người tới lấy, tôi muốn đối chiếu đúng đơn và đủ món, để không giao nhầm hoặc thiếu món. | Nhân viên đóng gói và bàn giao đơn mang đi | Đối chiếu món, số lượng và ghi chú với phiếu trước khi bàn giao | Chưa ghi nhận phản biện nhóm |
 | 4 | | | | | |
 | 5 | | | | | |
 | 6 | | | | | |
@@ -98,6 +100,8 @@ Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file 
 | Trường | Nội dung |
 |---|---|
 | Người được hỏi (vai trò, không ghi tên thật) | |
+| Thời điểm kiểm chứng | |
+| Cách hỏi (trực tiếp / gọi điện / survey / poll) | |
 | Câu nói đáng nhớ nhất (nguyên văn) | |
 | Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
 | Hiện đang xử lý bằng cách nào (workaround)? | |

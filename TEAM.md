@@ -13,7 +13,7 @@
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
 | 1 | Chu Văn Nhật | 2A202603848 | | chunhat |
-| 2 | | | | |
+| 2 | Pham Quang Tuan | 2A202603824 | | |
 | 3 | | | | |
 | 4 | | | | |
 
@@ -55,7 +55,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 -
 
-### HoVaTen-MSSV
+### PhamQuangTuan-2A202603824
 
 **Phần việc phụ trách:**
 
