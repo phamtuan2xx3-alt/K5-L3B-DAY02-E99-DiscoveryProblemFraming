@@ -7,8 +7,8 @@
 
 - Tên nhóm: E99
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
-- Quyết định cuối: Go / Not Yet / No-Go
+- Candidate problem phân tích: Sinh viên rà repo bài lab thủ công mất thời gian đối chiếu tên, cấu trúc và mục bắt buộc, nhưng vẫn có thể bỏ sót lỗi hình thức.
+- Quyết định cuối: **Not Yet** — cần kiểm chứng người dùng thật trước khi triển khai; Rule là hướng thử, No AI là đối chứng và fallback.
 
 ---
 
@@ -121,6 +121,9 @@ Thang bằng chứng: 1 = chưa có; 2 = có tín hiệu gián tiếp; 3 = có t
 **Ưu tiên:** #1 và #2 kiểm pain và cách đang xử lý; #3 kiểm nguy cơ người dùng tin nhầm; #4 kiểm khả năng làm một mẫu nhỏ. Chưa đề xuất AI trước khi biết các yêu cầu nào Rule đã xử lý đủ.
 
 ### 3.2. Kiểm chứng
+
+> **Ghi chú: Ba snapshot dưới đây là giả lập; nhân vật, lời thoại và số liệu được dựng để minh họa, không phải phỏng vấn người thật và không được tính là bằng chứng kiểm chứng.**
+
 #### Snapshot 1 — Sinh viên rà bài nhóm bằng tay
 
 | Trường                                | Nội dung                                                                                                                 |
@@ -308,68 +311,66 @@ Cách viết v0 giữ vấn đề và tiêu chí thành công tách khỏi lựa
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Bài của nhóm nằm ở ô:
-
-Vì sao:
+**Mơ hồ thấp, phức tạp cao:** Các điều kiện về tên, file và mục bắt buộc rõ đúng/sai, nhưng phải đối chiếu nhiều tài liệu qua nhiều bước. Luồng xử lý cố định; phần đánh giá lập luận vẫn do người đọc thực hiện.
 
 ### 6.2. So sánh 4 mức
 
-| Mức                       | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
-| ------------------------- | -------------------------- | ---------- | ------ | ----- |
-| **No AI** (sửa quy trình) |                            |            |        |       |
-| **Rule**                  |                            |            |        |       |
-| **Workflow**              |                            |            |        |       |
-| **Agent**                 |                            |            |        |       |
+| Mức | Phương án | Đủ khi nào | Rủi ro | Chọn? |
+|---|---|---|---|---|
+| **No AI** | Template đúng đề + checklist + người rà cuối | Ít file, người dùng đã rà nhanh và ít lỗi | Dò thủ công, có thể sót mục | Đối chứng và phương án quay về |
+| **Rule** | Kiểm tên/file/mục/link; báo vị trí cần xem | Yêu cầu có quy tắc và cấu hình đúng đề | Thiếu quy tắc, cảnh báo sai, dùng kết quả cũ | **Chọn để thử** |
+| **Workflow** | Rule kiểm hình thức, AI hỗ trợ đọc nội dung, người duyệt | Có nhu cầu kiểm nghĩa và bộ đáp án rõ | Nhận xét sai, tăng công kiểm lại | Chưa cần trong phạm vi hiện tại |
+| **Agent** | AI tự chọn công cụ và các bước kiểm | Các bước thực sự không thể định trước | Quyền rộng, khó kiểm soát hành động | Không chọn |
 
-**Mức chọn:**
-
-**Vì sao không chọn mức đơn giản hơn:**
+**Mức chọn: Rule.** Kiểm tên và mục lặp lại là phần có thể tự động hóa. Tuy nhiên, Rule phải được so với checklist No AI đã chuẩn hóa; nếu không tạo lợi ích ròng sau công cấu hình, giữ No AI. Chưa cần Workflow/Agent vì tác vụ hình thức có luồng cố định, theo cách phân biệt của [Anthropic](https://www.anthropic.com/research/building-effective-agents).
 
 ### 6.3. AI Canvas rút gọn
 
-| Thành phần                                                        | Nội dung |
-| ----------------------------------------------------------------- | -------- |
-| **Prediction** — AI dự đoán / tạo ra gì?                          |          |
-| **Judgment** — con người cân nhắc, quyết định gì?                 |          |
-| **Action** — hành động cuối cùng là gì, ai làm?                   |          |
-| **Outcome** — đo kết quả bằng gì?                                 |          |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? |          |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện?                   |          |
+**Không áp dụng vì chọn Rule:** Không có bước mô hình dự đoán hoặc tạo nội dung. Đầu vào gồm commit repo, danh sách thành viên và cấu hình theo đề; đầu ra là lỗi có vị trí, phần đã kiểm và mục cần người xác minh. Người rà duyệt kết quả, tác giả tự sửa và mỗi người tự nộp LMS.
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
+Không áp dụng phần đánh giá AI cho giải pháp Rule. Thiết kế vẫn giữ quyền duyệt ở người dùng và tránh báo đạt sai: mục không đọc được hoặc chưa có quy tắc phải ghi “chưa xác minh”. Thời gian xử lý cảnh báo sai được tính vào tổng công rà.
 
 ---
 
 ## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
 
-| Trường                                          | Nội dung                        |
-| ----------------------------------------------- | ------------------------------- |
-| **Actor**                                       |                                 |
-| **Quy trình**                                   |                                 |
-| **Bottleneck**                                  |                                 |
-| **Impact**                                      |                                 |
-| **Success Metric** (baseline → target, cách đo) |                                 |
-| **Boundary**                                    |                                 |
-| **AI intervention point**                       |                                 |
-| **Mức chọn**                                    | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra**                     |                                 |
+V1 bổ sung phạm vi Rule và cách so với No AI; dữ liệu bằng chứng giữ nguyên như CP4.
 
-**Thay đổi so với v0 và lý do:**
+| Trường | Nội dung |
+|---|---|
+| **Actor** | Sinh viên phụ trách rà repo nhóm trước khi nộp lab, đang mở và đối chiếu file thủ công |
+| **Quy trình** | Xác định yêu cầu/bản repo → rà hình thức → đọc nội dung → xử lý cảnh báo → kiểm bản cuối → tự nộp LMS |
+| **Bottleneck** | Tìm mục và đối chiếu từng file; tham chiếu 15–20 phút từ card Nhật, tách khỏi thời gian sửa nội dung |
+| **Impact** | Một lượt tham chiếu 45 phút gồm 40 phút rà và 5 phút nộp; chưa có baseline nhiều người hoặc tỷ lệ lỗi |
+| **Success Metric** | Giảm ≥30% trung vị thời gian rà, lỗi hình thức bỏ sót không tăng. Nếu baseline đo lại là 40 phút, target ≤28 phút. Rule cần có lợi ích ròng dương so với checklist No AI qua 4 lượt cùng phạm vi đề, tính cả thiết lập/cập nhật. Cách đo tại mục 4.3; nộp LMS báo riêng |
+| **Boundary** | Chỉ kiểm hình thức có quy tắc, không chấm lập luận. Không tự sửa/xóa bài, gửi dữ liệu ra ngoài hoặc nộp LMS. Báo rõ mục chưa kiểm; kiểm lại sau mọi thay đổi |
+| **AI intervention point** | **Không có** — tác vụ đang xét dùng điều kiện cố định |
+| **Mức chọn** | **Rule để thử**, No AI làm đối chứng và phương án quay về |
+| **Rủi ro & người kiểm tra** | Cấu hình thiếu, cảnh báo sai, kết quả cũ hoặc hiểu nhầm trạng thái. Người rà cuối đối chiếu đề và commit; người rà độc lập kiểm lỗi còn sót; tác giả tự sửa nội dung |
 
-| Trường | v0  | v1  | Vì sao đổi |
-| ------ | --- | --- | ---------- |
-|        |     |     |            |
+**Thay đổi so với v0:**
 
-**Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
+| Trường | v0 | v1 | Lý do |
+|---|---|---|---|
+| Success Metric | Thời gian và lỗi | Thêm đối chứng No AI, lợi ích ròng qua 4 lượt | Tính cả công thiết lập và cập nhật |
+| Boundary | Không viết/sửa/nộp thay | Thêm trạng thái chưa xác minh, kiểm đúng commit | Tránh tin kết quả thiếu hoặc đã cũ |
+| Mức can thiệp | Để mở | Rule, không dùng AI | Yêu cầu hình thức có điều kiện rõ |
 
-|   # | Tiêu chí | Đạt khi | Không đạt khi |
-| --: | -------- | ------- | ------------- |
-|   1 |          |         |               |
-|   2 |          |         |               |
-|   3 |          |         |               |
+**5 tiêu chí đánh giá giải pháp Rule:**
+
+| Mã | Tiêu chí | Đạt khi | Không đạt khi |
+|---|---|---|---|
+| E1 | Đúng lỗi và vị trí | Phát hiện đủ lỗi thuộc quy tắc trong bộ mẫu; không báo sai trường hợp hợp lệ | Bỏ sót lỗi hoặc báo sai file/mục |
+| E2 | Phân biệt hình thức và nội dung | Chỉ xác nhận phần đã kiểm; nội dung cần đọc hiểu chuyển con người | Báo bài đạt nội dung/điểm chỉ từ heading hoặc ô có chữ |
+| E3 | Đúng trạng thái, phiên bản | Ghi commit và cấu hình; phần không kiểm được báo chưa xác minh | Dùng kết quả cũ hoặc coi lỗi truy cập là đạt |
+| E4 | Giữ quyền người dùng | Không sửa/gửi/nộp thay; rà thủ công tiếp được khi công cụ hỏng | Có hành động ngoài quyền hoặc không có đường quay về |
+| E5 | Có lợi ích thực tế | Thời gian rà giảm ≥30%, lỗi không tăng; lợi ích ròng dương so với No AI trong 4 lượt | Nhanh do bỏ bước kiểm, lỗi tăng hoặc công cấu hình vượt tiết kiệm |
+
+[Bộ 10 tình huống đầu vào/đầu ra mong đợi](../assets/cp6-rule-eval-cases.md) kiểm E1–E4, **chưa chạy**. E5 cần đo tác vụ với người dùng.
+
+**Lợi ích ròng trong 4 lượt** = tổng thời gian No AI − (công thiết lập + công cập nhật + tổng thời gian Rule). Thời gian Rule đã gồm đọc cảnh báo, sửa trong phạm vi, chạy lại và fallback.
 
 ---
 
@@ -377,33 +378,52 @@ Vì sao:
 
 ### 8.1. Bốn rủi ro
 
-| Rủi ro          | Câu hỏi                                                           | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
-| --------------- | ----------------------------------------------------------------- | ----------------------------------------------------- | ------------------ |
-| **Value**       | Người dùng có thật sự cần và sẽ dùng không?                       |                                                       |                    |
-| **Usability**   | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? |                                                       |                    |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không?                     |                                                       |                    |
-| **Viability**   | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành?     |                                                       |                    |
+Đánh giá theo [Marty Cagan — The Four Big Risks](https://www.svpg.com/four-big-risks/).
+
+| Rủi ro | Mức độ | Căn cứ | Cách giảm |
+|---|---|---|---|
+| **Value** | **Cao** | Chưa có phỏng vấn thật ngoài nhóm; checklist hiện có có thể đã đủ | Quan sát 3 sinh viên, có người dùng template tốt; đo cùng phạm vi rà |
+| **Usability** | **Trung bình** | Có thể hiểu đủ cấu trúc là bài đã đạt; cảnh báo có thể gây thêm công | Cho người dùng giải thích kết quả; đo cảnh báo sai và thời gian xử lý |
+| **Feasibility** | **Trung bình** | Công cụ nền đã có, chưa chạy bộ quy tắc theo đề | Thử local trên một đề và 10 mẫu có đáp án |
+| **Viability** | **Trung bình** | Chưa đo công cập nhật và xác định người duy trì | Giữ dữ liệu local, phân công duy trì, tính lợi ích ròng |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Not Yet — kiểm chứng pain và thử Rule phạm vi nhỏ trước khi triển khai.** Rủi ro Value còn Cao; chọn Rule để thử chưa có nghĩa Rule tốt hơn No AI.
 
-**Lý do:**
+**Bước tiếp theo:**
 
-**Nếu Go — pilot nhỏ nhất:**
+| Bước | Việc làm | Điều kiện đi tiếp |
+|---|---|---|
+| 1 | Thử một đề với 10 mẫu | Toàn bộ mẫu đạt E1–E4 trước khi thử bài thật |
+| 2 | So cách hiện tại, checklist No AI và Rule ở ít nhất 3 người | Thời gian rà giảm ≥30%, lỗi không tăng; cả 3 người hiểu phần công cụ chưa kiểm |
+| 3 | Theo dõi 4 lượt dùng cùng phạm vi cấu hình | Lợi ích ròng Rule dương và có người duy trì; đánh giá lại rủi ro trước Go |
 
-**Nếu Not Yet — cần kiểm chứng gì trước:**
+**Ngưỡng dừng:**
 
-**Nếu No-Go — nên làm gì thay AI:**
+- Không xác nhận được pain ở bước 1 → giữ checklist hiện có hoặc đổi candidate.
+- Có 1 lỗi bắt buộc đã định nghĩa bị bỏ sót nhưng báo đạt, hoặc có hành động ngoài quyền → dừng ngay, rà thủ công và sửa nguyên nhân.
+- Sau ít nhất 3 lượt thử, thời gian không giảm 30% hoặc lỗi tăng → quay về No AI, xem lại quy trình.
+- Sau 4 lượt, lợi ích ròng ≤0 hoặc không có người duy trì → không mở rộng Rule. Đề đổi nhưng cấu hình chưa cập nhật thì dùng checklist gốc để rà thủ công.
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+Nếu đạt Go, phạm vi đầu tiên là một đề lab, kiểm local và người dùng duyệt. Mẫu thử nhỏ chỉ quyết định bước thử tiếp theo, chưa đủ khẳng định hiệu quả cho cả lớp.
 
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
-
--
+- Baseline 40 phút rà là phân rã từ một card, chưa được đo lại. Các mốc 19 phút rà/24 phút cả nộp ở CP5 là kịch bản, không phải kết quả thử.
+- Chưa có bộ kiểm Rule chạy thật. Tài liệu công cụ và bộ eval chỉ xác định khả năng, phạm vi và cách kiểm dự kiến.
+- Nhóm cần xác nhận lựa chọn candidate, phản biện v0 và phân công duy trì. Chỉ bổ sung kết quả thật vào các bảng sau khi thực hiện.
+- Tiếp tục theo thứ tự kiểm pain → thử mẫu → so với No AI → tính công dùng lại. Không mở rộng sang chấm lập luận hoặc nộp LMS.
 
 ## 10. Tài liệu tham khảo
 
--
+Nguồn chính thức được mở trong quá trình research ngày 09/11/2026; nguồn công cụ xác nhận tính năng, không xác nhận hiệu quả tại lớp.
+
+1. [markdownlint-cli2 — Tài liệu chính thức](https://github.com/DavidAnson/markdownlint-cli2).
+2. [markdown-link-check — Tài liệu chính thức](https://github.com/tcort/markdown-link-check).
+3. [GitHub Docs — Status checks](https://docs.github.com/en/pull-requests/reference/status-checks).
+4. [Jeff Gothelf — Business Problem Statements vs Opportunity Statements](https://jeffgothelf.com/blog/business-problem-statement-opportunity-statement/).
+5. [Google PAIR — User Needs + Defining Success](https://pair.withgoogle.com/chapter/user-needs/).
+6. [Anthropic — Building effective agents](https://www.anthropic.com/research/building-effective-agents).
+7. [Marty Cagan / SVPG — The Four Big Risks](https://www.svpg.com/four-big-risks/).

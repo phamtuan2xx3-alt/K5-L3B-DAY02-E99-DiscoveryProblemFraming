@@ -5,8 +5,8 @@
 ## Thông tin nhóm
 
 - Tên nhóm: E99
-- Candidate problem nhóm chọn (1 câu):
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Candidate problem phân tích: Sinh viên rà repo bài lab thủ công mất thời gian đối chiếu tên, cấu trúc và mục bắt buộc, nhưng vẫn có thể bỏ sót lỗi hình thức.
+- Quyết định trong báo cáo: **Not Yet** — kiểm chứng người dùng thật trước khi triển khai; **Rule** là hướng thử, **No AI** là đối chứng và phương án quay về.
 
 ## Thành viên
 
